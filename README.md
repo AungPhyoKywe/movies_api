@@ -3826,3 +3826,180 @@
     "duration": 0.205
     }
 ```
+* **Error Response:**
+
+  * **Code:** 400 VALIDATION ERROR <br />
+    **Content:** 
+    ```javascript
+        {
+        "success": 0,
+        "code": 400,
+        "meta": {
+            "method": "GET",
+            "endpoint": "/api/1/movies/?limit=dfdsfd&offset=ddd"
+        },
+        "data": [],
+        "error": [
+            {
+                "attribute": "limit",
+                "messages": "The limit must be an integer."
+            },
+            {
+                "attribute": "offset",
+                "messages": "The offset must be an integer."
+            }
+        ]
+    }
+    ```
+
+Get Movies Details
+
+* **URL**
+
+  /api/1/movies/{id}
+
+* **Method:** `GET`
+
+* **Header:** `Accept:application/json`
+
+* **Success Movies List Response:**
+
+  * **Code:** 200 <br />
+    
+    **Content:** 
+
+    ```javascript
+    {
+    "success": 1,
+    "code": 200,
+    "meta": {
+        "method": "GET",
+        "endpoint": "/api/1/movies/32"
+    },
+    "data": {
+        "id": 32,
+        "title": "Mr.",
+        "summary": "Consectetur iusto est aperiam voluptas qui unde qui cumque est sequi quibusdam recusandae minima quia in cumque animi provident ut.",
+        "cover_image": "",
+        "genres": "Drama",
+        "author": "Tierra Fahey",
+        "tags": "tag-32",
+        "imdb_rate": 32,
+        "pdf_file": "http://www.gulgowski.com/dolorem-pariatur-id-vitae-dicta",
+        "created_at": "29/09/2022 02:55:06",
+        "updated_at": "27/01/1976 09:42:56",
+        "comments": [
+            {
+                "id": 32,
+                "movie_id": 32,
+                "email": "dbrakus@example.com",
+                "comment": "Ut quia eaque aliquid eum tenetur magni quia. Dolores est ut ratione. Aut ut autem aspernatur sit perspiciatis consectetur laborum.",
+                "created_at": "11/10/1972 09:59:25",
+                "updated_at": "17/04/2008 04:26:56"
+            }
+        ],
+        "related_movies": [
+            {
+                "id": 2,
+                "title": "Mrs.",
+                "summary": "Consequatur et vel dolore veritatis quis omnis sit excepturi dolore occaecati sint unde nobis veniam adipisci nisi quidem quo quidem sed minima ducimus vel commodi sit est consectetur quo sed voluptatem.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Renee Kohler",
+                "tags": "tag-2",
+                "imdb_rate": 2,
+                "pdf_file": "http://www.hammes.com/",
+                "deleted_at": null,
+                "created_at": "1981-07-20 22:25:45",
+                "updated_at": "1978-04-16 06:24:34"
+            },
+            {
+                "id": 13,
+                "title": "Mrs.",
+                "summary": "Magnam praesentium sint deserunt doloribus rerum sed quod veniam distinctio debitis est quasi distinctio qui consequatur modi aut veniam eos veniam placeat aut quod sunt iusto natus esse consectetur qui voluptate eaque est incidunt sit molestiae animi quia odio delectus.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Agustina Fisher",
+                "tags": "tag-13",
+                "imdb_rate": 13,
+                "pdf_file": "https://www.prosacco.com/qui-qui-officia-facere-similique",
+                "deleted_at": null,
+                "created_at": "2012-01-11 06:03:14",
+                "updated_at": "1982-09-27 19:47:10"
+            },
+            {
+                "id": 14,
+                "title": "Prof.",
+                "summary": "Molestiae alias aspernatur ex placeat quis aut quam aut maiores corporis omnis soluta enim quae non optio fugiat quia doloremque nam a rerum fugiat iste enim quia eos temporibus.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Muriel Beer",
+                "tags": "tag-14",
+                "imdb_rate": 14,
+                "pdf_file": "http://lakin.com/fuga-mollitia-qui-laboriosam-tempore-dolores-dolores-illo",
+                "deleted_at": null,
+                "created_at": "2015-07-22 12:49:38",
+                "updated_at": "1980-06-13 11:05:29"
+            },
+            {
+                "id": 23,
+                "title": "Miss",
+                "summary": "Non rem doloremque voluptatibus reiciendis quibusdam fugit perferendis molestiae corrupti fugiat quis omnis vitae in fuga odit delectus accusantium incidunt minus minima magni aut in ducimus corporis adipisci.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Mr. Lula Konopelski DVM",
+                "tags": "tag-23",
+                "imdb_rate": 23,
+                "pdf_file": "http://www.kilback.com/aspernatur-fugit-magnam-porro.html",
+                "deleted_at": null,
+                "created_at": "2019-09-30 20:31:22",
+                "updated_at": "1989-11-21 06:14:42"
+            },
+            {
+                "id": 26,
+                "title": "Dr.",
+                "summary": "Sit sed perspiciatis incidunt illo magnam molestiae dolores aut molestiae odio molestiae est in est excepturi a ut officiis et rerum earum non expedita molestiae natus aut eum dignissimos qui sunt molestiae quaerat accusantium aperiam doloribus.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Antonina Sawayn MD",
+                "tags": "tag-26",
+                "imdb_rate": 26,
+                "pdf_file": "http://koss.com/nihil-aut-temporibus-sed-ut-modi",
+                "deleted_at": null,
+                "created_at": "1989-05-17 17:33:13",
+                "updated_at": "1998-08-01 12:06:34"
+            },
+            {
+                "id": 27,
+                "title": "Mr.",
+                "summary": "Reiciendis laborum sed distinctio dolorem aut ut ad sed ut rem quis repellendus recusandae itaque voluptatem qui aut est impedit quia illo neque labore quaerat vel nostrum ut porro quis facilis at autem.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Favian Schaefer",
+                "tags": "tag-27",
+                "imdb_rate": 27,
+                "pdf_file": "http://www.hermann.com/asperiores-suscipit-explicabo-magnam.html",
+                "deleted_at": null,
+                "created_at": "2014-02-18 05:01:16",
+                "updated_at": "1986-07-05 12:03:47"
+            },
+            {
+                "id": 31,
+                "title": "Mrs.",
+                "summary": "Voluptatem ipsam fugiat reprehenderit fugiat ullam ratione eum a amet a vel maiores blanditiis numquam consequuntur in quibusdam officia.",
+                "image_path": "",
+                "generes": "Drama",
+                "author": "Mr. Sidney Kertzmann Sr.",
+                "tags": "tag-31",
+                "imdb_rate": 31,
+                "pdf_file": "http://stracke.org/occaecati-sed-fugit-et-officia-sed-fugit",
+                "deleted_at": null,
+                "created_at": "2017-02-09 03:27:03",
+                "updated_at": "2005-07-09 22:41:07"
+            }
+        ]
+    },
+    "errors": {},
+    "duration": 0.006
+}
+```
