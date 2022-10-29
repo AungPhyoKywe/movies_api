@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "efc97c85-389e-4cf7-bbc3-402d90937e09",
+		"name": "MovieAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6501466"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Aung Phyo Kywe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ransom.hettinger@example.net",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "super123",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2ZkOGUyMjFkM2MxYTU4NTc2NDUwNDJlMDFhN2JhODA2NmFlYzQ2ZWMwZjZjOTUxYWExZjlmOTIxN2RjNmQxOGFkOWE2NjE4OTcxYzM4MDIiLCJpYXQiOjE2NjcwMzc0ODEuNTgxMDc3LCJuYmYiOjE2NjcwMzc0ODEuNTgxMDc4LCJleHAiOjE2OTg1NzM0ODEuNTc4MTg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Cyy8-IlJZ7NlW_jnc99JGV_Tx7-t6bexa28cWs34OTh6rhf7ks9o-fhPw5oCaV6i0L2Pey4uBy3FX6aOBpnfV6ENLw4KpXMDxyN-WWoKfU_M3XZ2HHZADl1DLMLOkjKJyEMw1IM056JJ_VQ9qi8UdS8Fqp_6tkT3djpqjD6SdvqtZ-fDk9EIW994hgghpWBeALBrv2y0vV7rReeqKppXlZSmja07jfwBwxCT6ZsUZ-S2jzlvX6mT0Rc_PTTaJeuHBakgj1v0gWvx-ZRjja8vyzNsADJCEFpkkEK5eoo_d1jlaATJKD86KyUoqr4wQRcybWAJkdYk9-crSIVkRDNTKYkJy2qMxxA6K97_XynC7aSZWZbHhH4dC1ZhprNUlt0f0LiqS0T3f1MtgLE7HLy-azo27FvwdW-fWlD6UWk2PpsJPOPjrmP1oP5YSVhax46YizfDKRQql8dv8pQ4jAXEFNEud57TMHoTSutiOALdx-PaIJ72MbrNgC5JZW277ellE8j3q-19cj4SI8U7MqbZPGhbVg2cgJx0XDiEQncLwbFPdrMnWH3qJeXuppkuzgC39JW-75vUUPqbyLPMneJx_EhIhgte_VPhFTUK1HTlJVg8SYqXl_TokX_sof22kpHHYrUPhE_mY9p370sPkBv2RibRWsUr8DyYUinFH_MD87Q",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Aung Phyo Kywe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test33@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/movies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNzMxYTYwYTBkMGE4ZGNhNGNkODI0ZWVkZTdmNTlhZTFhMzY0Yzg4ZjkxYzk4M2E3M2ZkNzU4NzQwNjdkNmZmYWY1NTA5Y2IwMmEyODJjYzQiLCJpYXQiOjE2NjcwMTk2ODYuMzM5NjEyLCJuYmYiOjE2NjcwMTk2ODYuMzM5NjE0LCJleHAiOjE2OTg1NTU2ODYuMzM3NjgsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.mRfWvYS1d3qy9W5CHGoOj8aBffwLI746qJoWDQkarBmj2uN8BtPDdWpLy3RZqkKNZUMqLzka_NB9YO8ZUti5mhTyG3lWG6rOgqswFPJH7i07gLYmg9D_KEIorBeIeBe7r1eqkHil-BJfc4z4GpskzFqKuNcLof4jzHnePpOXCRdS4_0fRkvEe0Qm3QTRgVZ3JfjuJ1v2ceChK6N6mIslmWza1wmMcgLaFzBmutX57US0xEPK40LdBN0uiLtnvgsMnEq57rCTHpwaBAVIwpXYkYsJjBWNifXDAlaKGUjshyYWwBT8ssibuGjzKedCdVSSg69Mnuy57j4e6Xy_wfsQKLGO3ASXWXYdR76YBmZW5DQKe8KLomMAqnerfbz-E9n_YkreeXoS44WZjDtplDvA7nyqqZNmNSq4QWXjHMmApQRO0x6Ynkhvv-j8MZvw8l3ItWtAQQ1vDbWK1oRjkRCumX-nrDTJPH9iDizUr2UGS34hCMdJHgKPC9qf6RAIAS9u2CyDxIQUIC4OsBwamTz5ybIpIN7PuL8TsrVWSUmKGXAz0b2aZKxzRbN5OwbQl9sSQYmD4uyuGkGEyYXrpYiJB24_dgdvF39iAFl8HJ3qKB0DLO8G1pbr7ws6uUqnGWPcvwqtjUdJ1O-52UssNVK7aiJI_GR49g5jBStA8SMCuF0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Aung Phyo Kywe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test33@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/comments/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"comments",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete comments",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNzMxYTYwYTBkMGE4ZGNhNGNkODI0ZWVkZTdmNTlhZTFhMzY0Yzg4ZjkxYzk4M2E3M2ZkNzU4NzQwNjdkNmZmYWY1NTA5Y2IwMmEyODJjYzQiLCJpYXQiOjE2NjcwMTk2ODYuMzM5NjEyLCJuYmYiOjE2NjcwMTk2ODYuMzM5NjE0LCJleHAiOjE2OTg1NTU2ODYuMzM3NjgsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.mRfWvYS1d3qy9W5CHGoOj8aBffwLI746qJoWDQkarBmj2uN8BtPDdWpLy3RZqkKNZUMqLzka_NB9YO8ZUti5mhTyG3lWG6rOgqswFPJH7i07gLYmg9D_KEIorBeIeBe7r1eqkHil-BJfc4z4GpskzFqKuNcLof4jzHnePpOXCRdS4_0fRkvEe0Qm3QTRgVZ3JfjuJ1v2ceChK6N6mIslmWza1wmMcgLaFzBmutX57US0xEPK40LdBN0uiLtnvgsMnEq57rCTHpwaBAVIwpXYkYsJjBWNifXDAlaKGUjshyYWwBT8ssibuGjzKedCdVSSg69Mnuy57j4e6Xy_wfsQKLGO3ASXWXYdR76YBmZW5DQKe8KLomMAqnerfbz-E9n_YkreeXoS44WZjDtplDvA7nyqqZNmNSq4QWXjHMmApQRO0x6Ynkhvv-j8MZvw8l3ItWtAQQ1vDbWK1oRjkRCumX-nrDTJPH9iDizUr2UGS34hCMdJHgKPC9qf6RAIAS9u2CyDxIQUIC4OsBwamTz5ybIpIN7PuL8TsrVWSUmKGXAz0b2aZKxzRbN5OwbQl9sSQYmD4uyuGkGEyYXrpYiJB24_dgdvF39iAFl8HJ3qKB0DLO8G1pbr7ws6uUqnGWPcvwqtjUdJ1O-52UssNVK7aiJI_GR49g5jBStA8SMCuF0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Aung Phyo Kywe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test33@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/comments/48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"comments",
+						"48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNzMxYTYwYTBkMGE4ZGNhNGNkODI0ZWVkZTdmNTlhZTFhMzY0Yzg4ZjkxYzk4M2E3M2ZkNzU4NzQwNjdkNmZmYWY1NTA5Y2IwMmEyODJjYzQiLCJpYXQiOjE2NjcwMTk2ODYuMzM5NjEyLCJuYmYiOjE2NjcwMTk2ODYuMzM5NjE0LCJleHAiOjE2OTg1NTU2ODYuMzM3NjgsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.mRfWvYS1d3qy9W5CHGoOj8aBffwLI746qJoWDQkarBmj2uN8BtPDdWpLy3RZqkKNZUMqLzka_NB9YO8ZUti5mhTyG3lWG6rOgqswFPJH7i07gLYmg9D_KEIorBeIeBe7r1eqkHil-BJfc4z4GpskzFqKuNcLof4jzHnePpOXCRdS4_0fRkvEe0Qm3QTRgVZ3JfjuJ1v2ceChK6N6mIslmWza1wmMcgLaFzBmutX57US0xEPK40LdBN0uiLtnvgsMnEq57rCTHpwaBAVIwpXYkYsJjBWNifXDAlaKGUjshyYWwBT8ssibuGjzKedCdVSSg69Mnuy57j4e6Xy_wfsQKLGO3ASXWXYdR76YBmZW5DQKe8KLomMAqnerfbz-E9n_YkreeXoS44WZjDtplDvA7nyqqZNmNSq4QWXjHMmApQRO0x6Ynkhvv-j8MZvw8l3ItWtAQQ1vDbWK1oRjkRCumX-nrDTJPH9iDizUr2UGS34hCMdJHgKPC9qf6RAIAS9u2CyDxIQUIC4OsBwamTz5ybIpIN7PuL8TsrVWSUmKGXAz0b2aZKxzRbN5OwbQl9sSQYmD4uyuGkGEyYXrpYiJB24_dgdvF39iAFl8HJ3qKB0DLO8G1pbr7ws6uUqnGWPcvwqtjUdJ1O-52UssNVK7aiJI_GR49g5jBStA8SMCuF0",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "HEEEEE",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/comments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"comments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update comments",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNzMxYTYwYTBkMGE4ZGNhNGNkODI0ZWVkZTdmNTlhZTFhMzY0Yzg4ZjkxYzk4M2E3M2ZkNzU4NzQwNjdkNmZmYWY1NTA5Y2IwMmEyODJjYzQiLCJpYXQiOjE2NjcwMTk2ODYuMzM5NjEyLCJuYmYiOjE2NjcwMTk2ODYuMzM5NjE0LCJleHAiOjE2OTg1NTU2ODYuMzM3NjgsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.mRfWvYS1d3qy9W5CHGoOj8aBffwLI746qJoWDQkarBmj2uN8BtPDdWpLy3RZqkKNZUMqLzka_NB9YO8ZUti5mhTyG3lWG6rOgqswFPJH7i07gLYmg9D_KEIorBeIeBe7r1eqkHil-BJfc4z4GpskzFqKuNcLof4jzHnePpOXCRdS4_0fRkvEe0Qm3QTRgVZ3JfjuJ1v2ceChK6N6mIslmWza1wmMcgLaFzBmutX57US0xEPK40LdBN0uiLtnvgsMnEq57rCTHpwaBAVIwpXYkYsJjBWNifXDAlaKGUjshyYWwBT8ssibuGjzKedCdVSSg69Mnuy57j4e6Xy_wfsQKLGO3ASXWXYdR76YBmZW5DQKe8KLomMAqnerfbz-E9n_YkreeXoS44WZjDtplDvA7nyqqZNmNSq4QWXjHMmApQRO0x6Ynkhvv-j8MZvw8l3ItWtAQQ1vDbWK1oRjkRCumX-nrDTJPH9iDizUr2UGS34hCMdJHgKPC9qf6RAIAS9u2CyDxIQUIC4OsBwamTz5ybIpIN7PuL8TsrVWSUmKGXAz0b2aZKxzRbN5OwbQl9sSQYmD4uyuGkGEyYXrpYiJB24_dgdvF39iAFl8HJ3qKB0DLO8G1pbr7ws6uUqnGWPcvwqtjUdJ1O-52UssNVK7aiJI_GR49g5jBStA8SMCuF0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "comment",
+							"value": "LOVE",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test222233@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "movie_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/comments/51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"comments",
+						"51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload moves images",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNzMxYTYwYTBkMGE4ZGNhNGNkODI0ZWVkZTdmNTlhZTFhMzY0Yzg4ZjkxYzk4M2E3M2ZkNzU4NzQwNjdkNmZmYWY1NTA5Y2IwMmEyODJjYzQiLCJpYXQiOjE2NjcwMTk2ODYuMzM5NjEyLCJuYmYiOjE2NjcwMTk2ODYuMzM5NjE0LCJleHAiOjE2OTg1NTU2ODYuMzM3NjgsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.mRfWvYS1d3qy9W5CHGoOj8aBffwLI746qJoWDQkarBmj2uN8BtPDdWpLy3RZqkKNZUMqLzka_NB9YO8ZUti5mhTyG3lWG6rOgqswFPJH7i07gLYmg9D_KEIorBeIeBe7r1eqkHil-BJfc4z4GpskzFqKuNcLof4jzHnePpOXCRdS4_0fRkvEe0Qm3QTRgVZ3JfjuJ1v2ceChK6N6mIslmWza1wmMcgLaFzBmutX57US0xEPK40LdBN0uiLtnvgsMnEq57rCTHpwaBAVIwpXYkYsJjBWNifXDAlaKGUjshyYWwBT8ssibuGjzKedCdVSSg69Mnuy57j4e6Xy_wfsQKLGO3ASXWXYdR76YBmZW5DQKe8KLomMAqnerfbz-E9n_YkreeXoS44WZjDtplDvA7nyqqZNmNSq4QWXjHMmApQRO0x6Ynkhvv-j8MZvw8l3ItWtAQQ1vDbWK1oRjkRCumX-nrDTJPH9iDizUr2UGS34hCMdJHgKPC9qf6RAIAS9u2CyDxIQUIC4OsBwamTz5ybIpIN7PuL8TsrVWSUmKGXAz0b2aZKxzRbN5OwbQl9sSQYmD4uyuGkGEyYXrpYiJB24_dgdvF39iAFl8HJ3qKB0DLO8G1pbr7ws6uUqnGWPcvwqtjUdJ1O-52UssNVK7aiJI_GR49g5jBStA8SMCuF0",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Aung Phyo Kywe",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test33@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "cover_image",
+							"type": "file",
+							"src": "/Users/hivelocity/Downloads/312375776_443947987842147_4504526537423920924_n.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/movies/3/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"movies",
+						"3",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create movies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiNzMxYTYwYTBkMGE4ZGNhNGNkODI0ZWVkZTdmNTlhZTFhMzY0Yzg4ZjkxYzk4M2E3M2ZkNzU4NzQwNjdkNmZmYWY1NTA5Y2IwMmEyODJjYzQiLCJpYXQiOjE2NjcwMTk2ODYuMzM5NjEyLCJuYmYiOjE2NjcwMTk2ODYuMzM5NjE0LCJleHAiOjE2OTg1NTU2ODYuMzM3NjgsInN1YiI6IjYiLCJzY29wZXMiOltdfQ.mRfWvYS1d3qy9W5CHGoOj8aBffwLI746qJoWDQkarBmj2uN8BtPDdWpLy3RZqkKNZUMqLzka_NB9YO8ZUti5mhTyG3lWG6rOgqswFPJH7i07gLYmg9D_KEIorBeIeBe7r1eqkHil-BJfc4z4GpskzFqKuNcLof4jzHnePpOXCRdS4_0fRkvEe0Qm3QTRgVZ3JfjuJ1v2ceChK6N6mIslmWza1wmMcgLaFzBmutX57US0xEPK40LdBN0uiLtnvgsMnEq57rCTHpwaBAVIwpXYkYsJjBWNifXDAlaKGUjshyYWwBT8ssibuGjzKedCdVSSg69Mnuy57j4e6Xy_wfsQKLGO3ASXWXYdR76YBmZW5DQKe8KLomMAqnerfbz-E9n_YkreeXoS44WZjDtplDvA7nyqqZNmNSq4QWXjHMmApQRO0x6Ynkhvv-j8MZvw8l3ItWtAQQ1vDbWK1oRjkRCumX-nrDTJPH9iDizUr2UGS34hCMdJHgKPC9qf6RAIAS9u2CyDxIQUIC4OsBwamTz5ybIpIN7PuL8TsrVWSUmKGXAz0b2aZKxzRbN5OwbQl9sSQYmD4uyuGkGEyYXrpYiJB24_dgdvF39iAFl8HJ3qKB0DLO8G1pbr7ws6uUqnGWPcvwqtjUdJ1O-52UssNVK7aiJI_GR49g5jBStA8SMCuF0",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Game of throne 2",
+							"type": "text"
+						},
+						{
+							"key": "summary",
+							"value": "hello nice",
+							"type": "text"
+						},
+						{
+							"key": "image_path",
+							"type": "file",
+							"src": "/Users/hivelocity/Downloads/312375776_443947987842147_4504526537423920924_n.jpeg"
+						},
+						{
+							"key": "generes",
+							"value": "Funny",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Jhon",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "rd_1",
+							"type": "text"
+						},
+						{
+							"key": "imdb_rate",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "pdf_file",
+							"type": "file",
+							"src": "/Users/hivelocity/Downloads/1661156100867021.pdf",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movies",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2ZkOGUyMjFkM2MxYTU4NTc2NDUwNDJlMDFhN2JhODA2NmFlYzQ2ZWMwZjZjOTUxYWExZjlmOTIxN2RjNmQxOGFkOWE2NjE4OTcxYzM4MDIiLCJpYXQiOjE2NjcwMzc0ODEuNTgxMDc3LCJuYmYiOjE2NjcwMzc0ODEuNTgxMDc4LCJleHAiOjE2OTg1NzM0ODEuNTc4MTg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Cyy8-IlJZ7NlW_jnc99JGV_Tx7-t6bexa28cWs34OTh6rhf7ks9o-fhPw5oCaV6i0L2Pey4uBy3FX6aOBpnfV6ENLw4KpXMDxyN-WWoKfU_M3XZ2HHZADl1DLMLOkjKJyEMw1IM056JJ_VQ9qi8UdS8Fqp_6tkT3djpqjD6SdvqtZ-fDk9EIW994hgghpWBeALBrv2y0vV7rReeqKppXlZSmja07jfwBwxCT6ZsUZ-S2jzlvX6mT0Rc_PTTaJeuHBakgj1v0gWvx-ZRjja8vyzNsADJCEFpkkEK5eoo_d1jlaATJKD86KyUoqr4wQRcybWAJkdYk9-crSIVkRDNTKYkJy2qMxxA6K97_XynC7aSZWZbHhH4dC1ZhprNUlt0f0LiqS0T3f1MtgLE7HLy-azo27FvwdW-fWlD6UWk2PpsJPOPjrmP1oP5YSVhax46YizfDKRQql8dv8pQ4jAXEFNEud57TMHoTSutiOALdx-PaIJ72MbrNgC5JZW277ellE8j3q-19cj4SI8U7MqbZPGhbVg2cgJx0XDiEQncLwbFPdrMnWH3qJeXuppkuzgC39JW-75vUUPqbyLPMneJx_EhIhgte_VPhFTUK1HTlJVg8SYqXl_TokX_sof22kpHHYrUPhE_mY9p370sPkBv2RibRWsUr8DyYUinFH_MD87Q",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "DDDDD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/movies/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movies",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2ZkOGUyMjFkM2MxYTU4NTc2NDUwNDJlMDFhN2JhODA2NmFlYzQ2ZWMwZjZjOTUxYWExZjlmOTIxN2RjNmQxOGFkOWE2NjE4OTcxYzM4MDIiLCJpYXQiOjE2NjcwMzc0ODEuNTgxMDc3LCJuYmYiOjE2NjcwMzc0ODEuNTgxMDc4LCJleHAiOjE2OTg1NzM0ODEuNTc4MTg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Cyy8-IlJZ7NlW_jnc99JGV_Tx7-t6bexa28cWs34OTh6rhf7ks9o-fhPw5oCaV6i0L2Pey4uBy3FX6aOBpnfV6ENLw4KpXMDxyN-WWoKfU_M3XZ2HHZADl1DLMLOkjKJyEMw1IM056JJ_VQ9qi8UdS8Fqp_6tkT3djpqjD6SdvqtZ-fDk9EIW994hgghpWBeALBrv2y0vV7rReeqKppXlZSmja07jfwBwxCT6ZsUZ-S2jzlvX6mT0Rc_PTTaJeuHBakgj1v0gWvx-ZRjja8vyzNsADJCEFpkkEK5eoo_d1jlaATJKD86KyUoqr4wQRcybWAJkdYk9-crSIVkRDNTKYkJy2qMxxA6K97_XynC7aSZWZbHhH4dC1ZhprNUlt0f0LiqS0T3f1MtgLE7HLy-azo27FvwdW-fWlD6UWk2PpsJPOPjrmP1oP5YSVhax46YizfDKRQql8dv8pQ4jAXEFNEud57TMHoTSutiOALdx-PaIJ72MbrNgC5JZW277ellE8j3q-19cj4SI8U7MqbZPGhbVg2cgJx0XDiEQncLwbFPdrMnWH3qJeXuppkuzgC39JW-75vUUPqbyLPMneJx_EhIhgte_VPhFTUK1HTlJVg8SYqXl_TokX_sof22kpHHYrUPhE_mY9p370sPkBv2RibRWsUr8DyYUinFH_MD87Q",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "DDDDD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/1/movies/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1",
+						"movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
