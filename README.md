@@ -1,66 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+``Login endpoints```
+----
+  Create Token 
 
-## About Laravel
+* **URL**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  /v1/api/login
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* **Method:** `POST`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Header:** `Accept:application/json`
+  
+* **Data Params**
 
-## Learning Laravel
+    `email=admin@admin.com`
+    `password=admin123`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Success Login Response:**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+  * **Code:** 201 <br />
+    
+    **Content:** 
+    ```javascript
+    {
+    "success": 1,
+    "code": 201,
+    "meta": {
+        "method": "POST",
+        "endpoint": "/api/1/login"
+    },
+    "data": {
+        "name": "Dusty Bode V",
+        "email": "ransom.hettinger@example.net",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2ZkOGUyMjFkM2MxYTU4NTc2NDUwNDJlMDFhN2JhODA2NmFlYzQ2ZWMwZjZjOTUxYWExZjlmOTIxN2RjNmQxOGFkOWE2NjE4OTcxYzM4MDIiLCJpYXQiOjE2NjcwMzc0ODEuNTgxMDc3LCJuYmYiOjE2NjcwMzc0ODEuNTgxMDc4LCJleHAiOjE2OTg1NzM0ODEuNTc4MTg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Cyy8-IlJZ7NlW_jnc99JGV_Tx7-t6bexa28cWs34OTh6rhf7ks9o-fhPw5oCaV6i0L2Pey4uBy3FX6aOBpnfV6ENLw4KpXMDxyN-WWoKfU_M3XZ2HHZADl1DLMLOkjKJyEMw1IM056JJ_VQ9qi8UdS8Fqp_6tkT3djpqjD6SdvqtZ-fDk9EIW994hgghpWBeALBrv2y0vV7rReeqKppXlZSmja07jfwBwxCT6ZsUZ-S2jzlvX6mT0Rc_PTTaJeuHBakgj1v0gWvx-ZRjja8vyzNsADJCEFpkkEK5eoo_d1jlaATJKD86KyUoqr4wQRcybWAJkdYk9-crSIVkRDNTKYkJy2qMxxA6K97_XynC7aSZWZbHhH4dC1ZhprNUlt0f0LiqS0T3f1MtgLE7HLy-azo27FvwdW-fWlD6UWk2PpsJPOPjrmP1oP5YSVhax46YizfDKRQql8dv8pQ4jAXEFNEud57TMHoTSutiOALdx-PaIJ72MbrNgC5JZW277ellE8j3q-19cj4SI8U7MqbZPGhbVg2cgJx0XDiEQncLwbFPdrMnWH3qJeXuppkuzgC39JW-75vUUPqbyLPMneJx_EhIhgte_VPhFTUK1HTlJVg8SYqXl_TokX_sof22kpHHYrUPhE_mY9p370sPkBv2RibRWsUr8DyYUinFH_MD87Q"
+    },
+    "errors": {},
+    "duration": 0.096
+}
+    ```
+ 
+* **Error Response:**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+  * **Code:** 400 VALIDATION ERROR <br />
+    **Content:** 
+    ```javascript
+    {
+        "success": 0,
+        "code": 400,
+        "meta": {
+            "method": "POST",
+            "endpoint": "/api/v1/login/"
+        },
+        "data": [],
+        "error": [
+            {
+                "attribute": "email",
+                "message": "The email field is required."
+            },
+            {
+                "attribute": "password",
+                "message": "The password field is required."
+            }
+        ]
+    }
+    ```
 
-## Laravel Sponsors
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```javascript
+        {
+        "success": 0,
+        "code": 401,
+        "meta": {
+            "method": "POST",
+            "endpoint": "/api/1/login"
+        },
+        "data": [],
+        "error": {
+            "message": "Unauthorized."
+        },
+        "duration": 0.208
+    }
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    * **Code:** 400 Bad Request <br />
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    **Content:** 
+    ```javascript
+       {
+            "success": 0,
+            "code": 400,
+            "meta": {
+                "method": "POST",
+                "endpoint": "/api/1/login"
+            },
+            "data": [],
+            "error": [
+                {
+                    "attribute": "email",
+                    "messages": "The email field is required."
+                },
+                {
+                    "attribute": "password",
+                    "messages": "The password field is required."
+                }
+            ]
+        }
+    ```
