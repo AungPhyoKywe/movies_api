@@ -4227,4 +4227,500 @@
         }
     ```
 
+```Comments endpoints```
+----
+
+```Get Comments```
+
+* **URL**
+
+  `/api/1/comments`
+
+* **Method:** `GET`
+
+* **Success Comment List Response:**
+
+
+* **Code:** 200 <br />
+    
+    **Content:** 
+
+    ```javascript
+        {
+    "success": 1,
+    "code": 200,
+    "meta": {
+        "method": "GET",
+        "endpoint": "/api/1/comments/",
+        "limit": 30,
+        "offset": 0,
+        "total": 30
+    },
+    "data": [
+        {
+            "id": 54,
+            "movie_id": 4,
+            "email": "test@gmail.com",
+            "comment": "HEEEEE",
+            "created_at": "29/10/2022 12:05:03",
+            "updated_at": "29/10/2022 12:05:03"
+        },
+        {
+            "id": 53,
+            "movie_id": 4,
+            "email": "test@gmail.com",
+            "comment": "HEEEEE",
+            "created_at": "29/10/2022 12:05:02",
+            "updated_at": "29/10/2022 12:05:02"
+        },
+        {
+            "id": 52,
+            "movie_id": 4,
+            "email": "test@gmail.com",
+            "comment": "HEEEEE",
+            "created_at": "29/10/2022 12:05:01",
+            "updated_at": "29/10/2022 12:05:01"
+        },
+        {
+            "id": 51,
+            "movie_id": 2,
+            "email": "test222233@gmail.com",
+            "comment": "LOVE",
+            "created_at": "29/10/2022 10:01:33",
+            "updated_at": "29/10/2022 12:18:46"
+        },
+        {
+            "id": 50,
+            "movie_id": 4,
+            "email": "test@gmail.com",
+            "comment": "HEEEEE",
+            "created_at": "29/10/2022 10:01:30",
+            "updated_at": "29/10/2022 10:01:30"
+        },
+        {
+            "id": 46,
+            "movie_id": 46,
+            "email": "misty19@example.com",
+            "comment": "Ab quidem cumque molestiae aperiam. Voluptatem nobis voluptatem cupiditate velit est accusantium. Neque officiis dolor qui ullam. Rerum voluptatem rerum velit ea.",
+            "created_at": "15/01/2020 15:24:31",
+            "updated_at": "06/04/2011 15:53:05"
+        },
+        {
+            "id": 43,
+            "movie_id": 43,
+            "email": "ibernier@example.com",
+            "comment": "Velit hic aut recusandae quidem corporis. Quisquam tempore et aspernatur. Saepe occaecati quis quasi et doloremque neque omnis. Cupiditate perferendis vel et nobis.",
+            "created_at": "31/08/2018 14:36:50",
+            "updated_at": "29/08/1987 06:33:22"
+        },
+        {
+            "id": 24,
+            "movie_id": 24,
+            "email": "dulce.hudson@example.org",
+            "comment": "Eos non asperiores pariatur magni. Cumque ipsa sed et et fugit deserunt voluptas.",
+            "created_at": "17/08/2017 01:25:55",
+            "updated_at": "04/10/1983 19:49:42"
+        },
+        {
+            "id": 19,
+            "movie_id": 19,
+            "email": "qcummings@example.org",
+            "comment": "Tenetur quod adipisci et doloremque ducimus. Quod adipisci libero ipsam ut. Rerum dolore et vel aut sequi. Dolorum quia suscipit ipsam impedit voluptatum.",
+            "created_at": "14/09/2016 18:24:29",
+            "updated_at": "29/03/1977 21:12:08"
+        },
+        {
+            "id": 37,
+            "movie_id": 37,
+            "email": "helmer36@example.com",
+            "comment": "Cumque in recusandae sed distinctio. Nostrum sunt soluta amet consequatur.",
+            "created_at": "12/03/2016 17:24:14",
+            "updated_at": "14/01/1973 22:12:41"
+        },
+        {
+            "id": 41,
+            "movie_id": 41,
+            "email": "era28@example.com",
+            "comment": "Facere sit vitae neque sunt voluptatem. Voluptatum et qui quo vel molestiae. Quis commodi suscipit quia et.",
+            "created_at": "17/02/2016 17:34:34",
+            "updated_at": "05/08/1971 07:26:50"
+        },
+        {
+            "id": 5,
+            "movie_id": 5,
+            "email": "kelvin13@example.net",
+            "comment": "Rerum fuga sunt cupiditate nisi asperiores quidem laboriosam. Veniam nihil non officiis eum ipsum totam. Ut deleniti sunt est neque delectus.",
+            "created_at": "03/11/2015 14:44:42",
+            "updated_at": "05/09/1994 08:30:00"
+        },
+        {
+            "id": 1,
+            "movie_id": 1,
+            "email": "dlakin@example.com",
+            "comment": "Expedita natus mollitia et expedita. Velit consequuntur ut quod est incidunt iusto quia. Facilis est ullam omnis dolorum.",
+            "created_at": "31/08/2013 01:31:57",
+            "updated_at": "09/08/2005 05:49:44"
+        },
+        {
+            "id": 35,
+            "movie_id": 35,
+            "email": "aniya.hansen@example.net",
+            "comment": "Voluptatum dolorem deleniti nulla corporis et possimus ipsam. Iste tempora quidem error dolores veritatis. Vel fugit et in porro debitis pariatur. Omnis odit repellendus veritatis sunt vel.",
+            "created_at": "01/04/2013 16:58:31",
+            "updated_at": "03/12/2020 07:44:00"
+        },
+        {
+            "id": 11,
+            "movie_id": 11,
+            "email": "ramon.mante@example.org",
+            "comment": "Nihil maiores non veritatis perspiciatis. Odio blanditiis dolores eum aut. Repudiandae aut perspiciatis nostrum suscipit harum veniam et.",
+            "created_at": "30/01/2013 07:47:21",
+            "updated_at": "26/06/1992 20:46:13"
+        },
+        {
+            "id": 33,
+            "movie_id": 33,
+            "email": "smcclure@example.org",
+            "comment": "Debitis pariatur modi eos possimus dolorem. Aut et quae ad voluptatum cupiditate. Aut vel sed ea necessitatibus quisquam officia.",
+            "created_at": "14/10/2012 12:15:48",
+            "updated_at": "25/01/2012 23:58:04"
+        },
+        {
+            "id": 27,
+            "movie_id": 27,
+            "email": "harber.jermaine@example.org",
+            "comment": "Voluptatibus inventore qui facilis consequatur. Distinctio incidunt commodi quas quibusdam. Veritatis saepe ratione earum ut. Odit nisi qui illo ut iste ex repellat.",
+            "created_at": "11/07/2012 11:35:48",
+            "updated_at": "08/10/2009 17:53:13"
+        },
+        {
+            "id": 18,
+            "movie_id": 18,
+            "email": "vterry@example.net",
+            "comment": "Odit molestias et aut eum sint. Tempora voluptate non vero. Tempore natus ad veniam facilis natus occaecati illum.",
+            "created_at": "28/05/2012 06:37:50",
+            "updated_at": "12/07/1980 03:41:37"
+        },
+        {
+            "id": 8,
+            "movie_id": 8,
+            "email": "jaquelin.moen@example.org",
+            "comment": "Facilis hic et recusandae dignissimos consequatur quae enim. Tenetur impedit repudiandae odio sit et corrupti est. Aut quia nobis est animi eligendi labore.",
+            "created_at": "13/05/2011 03:11:41",
+            "updated_at": "16/04/2008 21:15:53"
+        },
+        {
+            "id": 44,
+            "movie_id": 44,
+            "email": "cleora58@example.org",
+            "comment": "Rerum reprehenderit optio ut occaecati quia est. Nam sint autem labore perspiciatis rem. Et qui qui hic delectus.",
+            "created_at": "18/09/2010 14:25:04",
+            "updated_at": "12/03/1978 22:00:51"
+        },
+        {
+            "id": 15,
+            "movie_id": 15,
+            "email": "hermiston.liam@example.org",
+            "comment": "Ratione voluptatem dignissimos minima cum voluptas sint est consectetur. Rem eum unde aut eum autem. Voluptas unde necessitatibus repellat dicta et quam fugit.",
+            "created_at": "30/03/2010 17:56:40",
+            "updated_at": "29/06/1972 00:41:22"
+        },
+        {
+            "id": 10,
+            "movie_id": 10,
+            "email": "sporer.katelynn@example.org",
+            "comment": "Consequatur nam earum iure asperiores sed. Eum qui aut suscipit quos perspiciatis aut qui. Occaecati quam ut incidunt voluptas sit et.",
+            "created_at": "13/01/2010 06:59:40",
+            "updated_at": "09/12/1979 20:19:32"
+        },
+        {
+            "id": 49,
+            "movie_id": 49,
+            "email": "gulgowski.haley@example.org",
+            "comment": "Eum corporis et autem consequatur aut aspernatur in corporis. Odit repellendus ipsa eum nostrum suscipit sint. Mollitia exercitationem voluptatem dolorum.",
+            "created_at": "22/09/2009 03:05:46",
+            "updated_at": "03/10/1988 20:17:21"
+        },
+        {
+            "id": 17,
+            "movie_id": 17,
+            "email": "rosario58@example.net",
+            "comment": "Sed iure ut similique ut ratione. Laboriosam sint dicta necessitatibus ut. Sit nemo provident voluptatem consequatur. Nihil non possimus facilis quasi minus ea.",
+            "created_at": "24/05/2007 06:15:07",
+            "updated_at": "10/03/1995 23:04:14"
+        },
+        {
+            "id": 21,
+            "movie_id": 21,
+            "email": "jovan22@example.com",
+            "comment": "Et sint est qui est. Provident ea tenetur neque nulla consequatur. Dolorem officiis et voluptas quo quam sed. Ut voluptates culpa quia aliquam.",
+            "created_at": "12/09/2006 15:48:56",
+            "updated_at": "18/08/2015 11:52:27"
+        },
+        {
+            "id": 31,
+            "movie_id": 31,
+            "email": "kuphal.kurt@example.org",
+            "comment": "Sunt optio molestiae rerum voluptas provident id. Sit similique iusto enim sapiente sit rerum ipsam.",
+            "created_at": "27/08/2004 11:45:05",
+            "updated_at": "01/07/1980 06:56:55"
+        },
+        {
+            "id": 28,
+            "movie_id": 28,
+            "email": "fcole@example.com",
+            "comment": "Non vel eum amet aut nesciunt. Sed repudiandae qui soluta molestias nulla. Tenetur aut magni dicta odio et nam. Impedit similique impedit deserunt molestias ex et praesentium. Vero hic est at quam.",
+            "created_at": "26/11/2001 09:54:52",
+            "updated_at": "24/08/1982 15:14:12"
+        },
+        {
+            "id": 13,
+            "movie_id": 13,
+            "email": "kilback.milton@example.org",
+            "comment": "Nihil et aliquid illo vitae. Sed ea eum omnis nulla. Rem illo quo qui molestias. Ea itaque est cumque laborum. Omnis laborum nihil et praesentium qui porro.",
+            "created_at": "18/11/2001 18:54:55",
+            "updated_at": "09/07/2021 21:43:46"
+        },
+        {
+            "id": 26,
+            "movie_id": 26,
+            "email": "oberbrunner.maximillia@example.net",
+            "comment": "Minima quasi expedita quas distinctio reiciendis. Qui nesciunt aliquid suscipit dolorem amet eum non. Sequi ut in id quis porro qui. Quasi suscipit quae saepe vel maiores animi.",
+            "created_at": "21/12/2000 12:49:09",
+            "updated_at": "28/06/1979 02:14:17"
+        },
+        {
+            "id": 16,
+            "movie_id": 16,
+            "email": "uhowe@example.net",
+            "comment": "Expedita est sed nostrum. Quasi voluptas dolorum libero suscipit quae. Exercitationem et ullam cumque sed mollitia inventore voluptatum. Praesentium eum totam sed perferendis ut.",
+            "created_at": "23/01/2000 06:20:09",
+            "updated_at": "05/02/1995 01:33:17"
+        }
+    ],
+    "errors": {},
+    "duration": 0.01
+   } ```
+
+```GET Comments Details ```
+
+* **URL**
+
+  `/api/1/comments/{id}`
+
+* **Method:** `GET`
+
+* **Header:** `Accept:application/json`
+
+* **Success Comments Details List Response:**
+
+  * **Code:** 200 <br />
+    
+    **Content:** 
+
+    ```javascript
+
+                {
+            "success": 1,
+            "code": 200,
+            "meta": {
+                "method": "GET",
+                "endpoint": "/api/1/comments/30"
+            },
+            "data": {
+                "id": 30,
+                "movie_id": 30,
+                "email": "dustin84@example.com",
+                "comment": "Repudiandae sed et aliquam possimus iure aut corrupti. Tempore voluptas cupiditate et nobis suscipit recusandae. Neque soluta amet vero reiciendis consequuntur illum.",
+                "created_at": "11/02/1988 05:17:30",
+                "updated_at": "08/07/1979 06:21:53"
+            },
+            "errors": {},
+            "duration": 0.011
+        }
+
+    ```
+
+```Create Comments  ```
+
+* **URL**
+
+  `/api/1/comments`
+
+* **Method:** `POST`
+
+* **Header:** `Accept:application/json`
+
+* **Success Comments Created Response:**
+
+  * **Code:** 201 <br />
+    
+    **Content:** 
+
+    ```javascript
+            {
+            "success": 1,
+            "code": 201,
+            "meta": {
+                "method": "POST",
+                "endpoint": "/api/1/comments/"
+            },
+            "data": {
+                "id": 54,
+                "movie_id": "4",
+                "email": "test@gmail.com",
+                "comment": "HEEEEE",
+                "created_at": "29/10/2022 12:05:03",
+                "updated_at": "29/10/2022 12:05:03"
+            },
+            "errors": {},
+            "duration": 0.047
+        }
+
+    ```
+    * **Error Comments Created Response:**
+
+  * **Code:** 400 <br />
+    
+    **Content:** 
+    ```javascript
+                    {
+            "success": 0,
+            "code": 400,
+            "meta": {
+                "method": "POST",
+                "endpoint": "/api/1/comments/"
+            },
+            "data": [],
+            "error": [
+                {
+                    "attribute": "movie_id",
+                    "messages": "The movie id field is required."
+                },
+                {
+                    "attribute": "email",
+                    "messages": "The email field is required."
+                },
+                {
+                    "attribute": "comment",
+                    "messages": "The comment field is required."
+                }
+            ]
+        }
+
+    ```
+
+
+```Update Comments  ```
+
+* **URL**
+
+  `/api/1/comments/{id}`
+
+* **Method:** `PUT`
+
+* **Header:** `Accept:application/json`
+
+* **Success Comments Created Response:**
+
+  * **Code:** 201 <br />
+    
+    **Content:** 
+
+    ```javascript
+
+                {
+            "success": 1,
+            "code": 201,
+            "meta": {
+                "method": "PUT",
+                "endpoint": "/api/1/comments/51"
+            },
+            "data": {
+                "updated": 1
+            },
+            "errors": {},
+            "duration": 0.05
+        }
+
+    ```
+
+    * **Errors Comments Created Response:**
+
+  * **Code:** 404 <br />
+    
+    **Content:** 
+
+    ```javascript
+
+            {
+            "success": 0,
+            "code": 404,
+            "meta": {
+                "method": "PUT",
+                "endpoint": "/api/1/comments/3333"
+            },
+            "data": [],
+            "error": "The resource of the given ID was not found.",
+            "duration": 0.026
+        }
+    ````
+
+
+```Deleted Comments  ```
+
+* **URL**
+
+  `/api/1/comments/{id}`
+
+* **Method:** `DELETE`
+
+* **Header:** `Accept:application/json`
+
+* **Success Comments Created Response:**
+
+  * **Code:** 201 <br />
+    
+    **Content:** 
+
+    ```javascript
+        {
+            "success": 1,
+            "code": 201,
+            "meta": {
+                "method": "DELETE",
+                "endpoint": "/api/1/movies/51"
+            },
+            "data": {
+                "deleted": 1
+            },
+            "errors": {},
+            "duration": 0.059
+        }
+
+
+    ```
+
+    * **Erros Comments Deleted Response:**
+
+  * **Code:** 404 <br />
+    
+    **Content:** 
+
+    ```javascript
+
+    {
+        "success": 0,
+        "code": 404,
+        "meta": {
+            "method": "DELETE",
+            "endpoint": "/api/1/movies/51"
+        },
+        "data": [],
+        "error": "The resource of the given ID was not found.",
+        "duration": 0.011
+    }
+
+```
+
 
