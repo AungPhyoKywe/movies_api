@@ -5,7 +5,7 @@
 
 * **URL**
 
-  /api/1/login
+  `/api/1/login`
 
 * **Method:** `POST`
 
@@ -3852,11 +3852,11 @@
     }
     ```
 
-Get Movies Details
+```Get Movies Details```
 
 * **URL**
 
-  /api/1/movies/{id}
+  `/api/1/movies/{id}`
 
 * **Method:** `GET`
 
@@ -4001,5 +4001,230 @@ Get Movies Details
     },
     "errors": {},
     "duration": 0.006
-}
-```
+ }```
+
+
+ ```Create Movies ```
+
+* **URL**
+
+  `/api/1/movies`
+
+* **Method:** `POST`
+
+* **Header:** `Accept:application/json` `Authorization:Bearer $baarerToken`
+
+* **Success Created Movies Response:**
+
+  * **Code:** 201 <br />
+    
+    **Content:** 
+
+    ```javascript
+      {
+    "success": 1,
+    "code": 201,
+    "meta": {
+        "method": "POST",
+        "endpoint": "/api/1/movies"
+    },
+    "data": {
+        "id": 57,
+        "title": "Game of throne 3",
+        "summary": "hello nice",
+        "cover_image": null,
+        "genres": null,
+        "author": null,
+        "tags": null,
+        "imdb_rate": "22",
+        "pdf_file": null,
+        "created_at": "29/10/2022 13:19:39",
+        "updated_at": "29/10/2022 13:19:39",
+        "comments": [],
+        "related_movies": [
+            {
+                "id": 55,
+                "title": "Game of throne 3",
+                "summary": "hello nice",
+                "image_path": null,
+                "generes": "Super",
+                "author": null,
+                "tags": null,
+                "imdb_rate": 22,
+                "pdf_file": null,
+                "deleted_at": null,
+                "created_at": "2022-10-29 13:19:15",
+                "updated_at": "2022-10-29 13:19:15"
+            },
+            {
+                "id": 56,
+                "title": "Game of throne 3",
+                "summary": "hello nice",
+                "image_path": null,
+                "generes": "GGGGGG",
+                "author": null,
+                "tags": null,
+                "imdb_rate": 22,
+                "pdf_file": null,
+                "deleted_at": null,
+                "created_at": "2022-10-29 13:19:26",
+                "updated_at": "2022-10-29 13:19:26"
+            },
+            {
+                "id": 57,
+                "title": "Game of throne 3",
+                "summary": "hello nice",
+                "image_path": null,
+                "generes": null,
+                "author": null,
+                "tags": null,
+                "imdb_rate": 22,
+                "pdf_file": null,
+                "deleted_at": null,
+                "created_at": "2022-10-29 13:19:39",
+                "updated_at": "2022-10-29 13:19:39"
+            }
+        ]
+    },
+    "errors": {},
+    "duration": 0.054
+}```
+
+* **Error Created Movies Response:**
+
+  * **Code:** 400 <br />
+    
+    **Content:** 
+
+    ```javascript
+            {
+            "success": 0,
+            "code": 400,
+            "meta": {
+                "method": "POST",
+                "endpoint": "/api/1/movies"
+            },
+            "data": [],
+            "error": [
+                {
+                    "attribute": "title",
+                    "messages": "The title field is required."
+                }
+            ]
+        }
+
+
+    ```
+
+
+ ```Updated Movies ```
+
+* **URL**
+
+  `/api/1/movies/{id}`
+
+* **Method:** `PUT`
+
+* **Header:** `Accept:application/json` `Authorization:Bearer $baarerToken`
+
+* **Success Updated Movies Response:**
+
+
+* **Code:** 201 <br />
+    
+    **Content:** 
+
+    ```javascript
+
+        {
+        "success": 1,
+        "code": 201,
+        "meta": {
+            "method": "PUT",
+            "endpoint": "/api/1/movies/3"
+        },
+        "data": {
+            "updated": 1
+        },
+        "errors": {},
+        "duration": 0.057
+    }
+
+    ```
+
+* **Error Updated Movies Response:**
+
+* **Code:** 404 <br />
+    
+    **Content:** 
+
+    ```javascript
+            {
+            "success": 0,
+            "code": 404,
+            "meta": {
+                "method": "PUT",
+                "endpoint": "/api/1/movies/222"
+            },
+            "data": [],
+            "error": "The resource of the given ID was not found.",
+            "duration": 0.015
+        }
+    ```
+
+```Deleted Movies ```
+
+* **URL**
+
+  `/api/1/movies/{id}`
+
+* **Method:** `PUT`
+
+* **Header:** `Accept:application/json` `Authorization:Bearer $baarerToken`
+
+* **Success Deleted Movies Response:**
+
+
+* **Code:** 201 <br />
+    
+    **Content:** 
+
+    ```javascript
+            {
+            "success": 1,
+            "code": 201,
+            "meta": {
+                "method": "DELETE",
+                "endpoint": "/api/1/movies/3"
+            },
+            "data": {
+                "deleted": 1
+            },
+            "errors": {},
+            "duration": 0.054
+        }
+
+    ```
+
+* **Error Deleted Movies Response:**
+
+* **Code:** 404 <br />
+    
+    **Content:** 
+
+    ```javascript
+
+            {
+            "success": 0,
+            "code": 404,
+            "meta": {
+                "method": "DELETE",
+                "endpoint": "/api/1/movies/3"
+            },
+            "data": [],
+            "error": "The resource of the given ID was not found.",
+            "duration": 0.014
+        }
+    ```
+
+
