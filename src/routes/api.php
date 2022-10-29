@@ -35,12 +35,6 @@ Route::prefix('1')->group(function () {
 
 
     Route::middleware('auth:api')->group(function () {
-        Route::get('products', [ProductController::class, 'getAllProduct']);
-        Route::get('products/{id}', [ProductController::class, 'showProductById']);
-        Route::post('products', [ProductController::class, 'createProduct']);
-        Route::put('products/{id}', [ProductController::class, 'updateProductById']);
-        Route::delete('products/{id}', [ProductController::class, 'deleteProductById']);
-
         //Movies
         Route::post('movies', [MoviesController::class, 'createMovie']);
         Route::put('movies/{id}', [MoviesController::class, 'updateMovieById']);

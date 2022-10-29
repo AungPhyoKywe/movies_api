@@ -182,7 +182,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        \Movies\Api\Product\Providers\BindProductServiceProvider::class,
         \Movies\Api\Movies\Providers\BindMovieServiceProvider::class,
         \Movies\Api\Comments\Providers\BindCommentServiceProvider::class,
 
